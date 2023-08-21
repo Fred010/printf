@@ -14,4 +14,4 @@ This project will handle parameters such as:
 int printf(const char *format, ...)
 
 ## Clone the repository
-git clone https://<yourtoken>@github.com/myusername/myproject.git
+git clone https://yourtoken@github.com/myusername/myproject.git
