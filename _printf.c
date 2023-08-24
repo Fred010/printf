@@ -12,7 +12,7 @@ void buffer_output(char buff[], int *id_buff)
 	{
 		write(1, &buff[0], *id_buff);
 	}
-	*if_buff = 0;
+	*id_buff = 0;
 }
 
 /**
