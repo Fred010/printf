@@ -11,9 +11,9 @@
 
 int func_fetch(const char *format, va_list roll, form_t *corollary)
 {
-	int print_poll = 0 id1 = 0, id2 = 0;
+	int print_poll = 0, id1 = 0, id2 = 0;
 
-	while (format[id] != '\0')
+	while (format[id1] != '\0')
 	{
 		if (format[id1] == '%')
 		{
@@ -65,11 +65,6 @@ int _printf(const char *format, ...)
 		{"s", print_str},
 		{"d", print_int},
 		{"i", print_int},
-		{"b", print_bin},
-		{"u", print_uni},
-		{"o", print_oct},
-		{"x", print_hex},
-		{"X", print_hex_upper},
 		{"S", print_strexe},
 		{"p", print_ptr},
 		{"r", print_revstr},

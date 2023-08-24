@@ -13,7 +13,7 @@ int print_oct(va_list roll)
 	int print_poll, id;
 	unsigned int n, a;
 
-	n = va_arg(list, int);
+	n = va_arg(roll, int);
 	a = n;
 	print_poll = 0;
 

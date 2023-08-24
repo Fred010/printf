@@ -30,7 +30,7 @@ int print_strexe(va_list roll)
 				_putchar('0');
 				print_poll++;
 			}
-			print_poll += print_uhex_int(str[id]);
+			print_poll += print_int(str[id]);
 		}
 		else
 		{
