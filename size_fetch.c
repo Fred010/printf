@@ -8,7 +8,7 @@
  * Return: size of argument
  */
 
-int size_fetch(const char *format, int index)
+int size_fetch(const char *format, int *index)
 {
 	int size = 0;
 	int index_c = *index + 1;

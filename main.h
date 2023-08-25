@@ -22,7 +22,7 @@
 struct form
 {
 	char form;
-	int(*func)(va_list, char[], int, int, int, int);
+	int (*func)(va_list, char[], int, int, int, int);
 };
 
 /**
