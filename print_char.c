@@ -17,5 +17,5 @@ int print_char(va_list ap, char buff[], int tags,
 {
 	char ch = va_arg(ap, int);
 
-	return (char_ctrl(ch, buff, tags, width, precision, size));
+	return (char_write_ctrl(ch, buff, tags, width, precision, size));
 }

@@ -17,7 +17,7 @@ int print_ctrl(const char *form, int *index, va_list ap, char buff[],
 	int loc, ulen = 0, char_print = -1;
 	form_t form_types[] = {
 		{'c', print_char}, {'s', print_str}, {'%', print_percent},
-		{'loc', print_int}, {'d', print_int}, {'b', print_bin},
+		{'i', print_int}, {'d', print_int}, {'b', print_bin},
 		{'u', print_uint}, {'o', print_oct}, {'x', print_hex},
 		{'X', print_uhex_upper}, {'p', print_ptr}, {'S', print_check},
 		{'r', print_revstr}, {'R', print_rotstr}, {'\0', NULL}

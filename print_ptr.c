@@ -22,7 +22,7 @@ int print_ptr(va_list ap, char buff[], int tags,
 	void *label = va_arg(ap, void *);
 
 	buff[BUFF_SIZE - 1] = '\0';
-	nlabel = (unsigned long) label;
+	arr_label = (unsigned long) label;
 
 	UNUSED(width);
 	UNUSED(precision);
@@ -30,10 +30,10 @@ int print_ptr(va_list ap, char buff[], int tags,
 
 	if (label == NULL)
 		return (write(1, "(nil)", 5));
-	while (nlabel > 0)
+	while (arr_label > 0)
 	{
-		buff[loc--] = link[nlabel % 16];
-		nlabel /= 16;
+		buff[loc--] = link[arr_label % 16];
+		arr_label /= 16;
 		len++;
 	}
 
@@ -44,6 +44,6 @@ int print_ptr(va_list ap, char buff[], int tags,
 	else if (tags & F_SPACE)
 		more_char = ' ', len++;
 	loc++;
-	return (ptr_print(buff, loc, len, width, tags,
+	return (ptr_log(buff, loc, len, width, tags,
 		pad, initial_pad, more_char));
 }

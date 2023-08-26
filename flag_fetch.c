@@ -11,8 +11,8 @@
 int flag_fetch(const char *format, int *index)
 {
 	int n, index_c, tags = 0;
-	const char FLAGS_CHAR = {'-', '+', '0', '#', ' ', '\0'};
-	const char FLAGS_ARRAY = {F_MINUS, F_PLUS, F_ZERO, F_HASH, F_SPACE, 0};
+	const char FLAGS_CHAR[] = {'-', '+', '0', '#', ' ', '\0'};
+	const char FLAGS_ARRAY[] = {F_MINUS, F_PLUS, F_ZERO, F_HASH, F_SPACE, 0};
 
 	for (index_c = *index + 1; format[index_c] != '\0'; index_c++)
 	{
