@@ -21,15 +21,16 @@ int print_ptr(va_list ap, char buff[], int tags,
 	char link[] = "0123456789abcdef";
 	void *label = va_arg(ap, void *);
 
-	buff[BUFF_SIZE - 1] = '\0';
-	arr_label = (unsigned long) label;
-
 	UNUSED(width);
-	UNUSED(precision);
 	UNUSED(size);
 
 	if (label == NULL)
 		return (write(1, "(nil)", 5));
+
+	buff[BUFF_SIZE - 1] = '\0';
+	UNUSED(precision);
+	arr_label = (unsigned long) label;
+
 	while (arr_label > 0)
 	{
 		buff[loc--] = link[arr_label % 16];
